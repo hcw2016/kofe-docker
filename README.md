@@ -344,6 +344,9 @@ elasticsearch:
 	environment:
 		ES_JAVA_OPTS: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=18080 -Dcom.sun.management.jmxremote.rmi.port=18080 -Djava.rmi.server.hostname=DOCKER_HOST_IP -Dcom.sun.management.jmxremote.local.only=false
 ```
+## Coming Soon!
+* TLS support for Elasticsearch and Kibana
+
 
 ## Thanks
 Special thanks to:
