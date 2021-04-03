@@ -6,7 +6,7 @@ create:
 	docker-compose up -d
 
 destroy:
-	docker-compose down -v
+	docker-compose down
 
 generate-index:
 	${PWD}/scripts/index-manage.sh
