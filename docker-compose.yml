@@ -23,6 +23,7 @@ services:
       # Use single node discovery in order to disable production mode and avoid bootstrap checks.
       # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
       discovery.type: single-node
+    restart: unless-stopped
     networks:
       - elk
 
@@ -38,6 +39,7 @@ services:
         read_only: true
     ports:
       - "5601:5601"
+    restart: unless-stopped
     networks:
       - elk
     depends_on:
@@ -62,6 +64,7 @@ services:
         source: ./filebeat/config/ossec/
         target: /usr/share/filebeat/module/ossec/
         read_only: true
+    restart: unless-stopped
     networks:
       - elk
     depends_on:
@@ -75,6 +78,7 @@ services:
     ports:
       - "1515:1515"
       - "1514:1514"
+    restart: unless-stopped
     networks:
       - elk
 networks:
